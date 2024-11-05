@@ -1,0 +1,15 @@
+/* обнулирование стилей */
+@import url('./style-reset/reset.css');
+
+
+
+.greeting {
+}
+.greeting__title {
+}
+.greeting__title-label {
+}
+.greeting__links-container {
+}
+.greeting__link {
+}
