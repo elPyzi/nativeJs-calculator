@@ -1,3 +1,7 @@
+body {
+    padding: 20px;
+}
+
 .calculator {
     background-color: var(--background-color-block);
     max-width: 35%;
@@ -93,10 +97,10 @@
     box-shadow: 3px 3px var(--second-color-shadow-hover);
 }
 .calculator__buttons:hover {
-   color: var(--second-color-shadow-hover);
+    color: var(--second-color-shadow-hover);
 }
 
 /* небольшой костыль.... */
-.theme-lang {
+/* .theme-lang {
     min-width: 20% !important;
-}
+} */

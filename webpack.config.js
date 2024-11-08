@@ -8,6 +8,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'public'),
+        publicPath: '/',
     },
     module: {
         rules: [
@@ -28,6 +29,17 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                        },
+                    },
+                ],
+            },
         ],
     },
     plugins: [
@@ -41,6 +53,10 @@ module.exports = {
                 'images',
                 'favicon.png',
             ),
+        }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src', 'pages', 'calculator.html'),
+            filename: 'pages/calculator.html',
         }),
     ],
     devServer: {

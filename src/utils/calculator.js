@@ -38,6 +38,10 @@ function calc(event) {
             signChange();
             break;
         }
+        case 'del':
+            DISPLAY_OUTPUT.textContent =
+                DISPLAY_OUTPUT.textContent.slice(0, -1) || '0';
+            break;
         case '+':
         case '-':
         case '*':
