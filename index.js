@@ -6,3 +6,4 @@ import './assets/styles/calculator.css';
 import './assets/styles/convertor.css';
 import './utils/theme/changeTheme';
 import './utils/calculator';
+import './utils/lang';
