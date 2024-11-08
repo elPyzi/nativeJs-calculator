@@ -1,28 +1,77 @@
-/* обнулирование стилей */
-@import url('./style-reset/reset.css');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    border: 0;
+    list-style-type: none;
+    line-height: 1;
+}
 
-@import url('./fonts/fonts.css');
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
 
-:root[data-theme='light']{
-    --background-color-primary:#80c8c9;
-    --background-color-greeting:#E0EAD6;
-    --main-black-color:#333333;
-    --second-black-color:#4D4D4D;
+html {
+    font-family: 'Courier New', Courier, monospace;
 }
-:root[data-theme='night']{
-    --background-color-primary:#0E1433;
-    --background-color-greeting:#072946;
-    --main-black-color:#E0EAD6;
-    --second-black-color:#B0B0A0;
+
+:root[data-theme='light'] {
+    --background-color-primary: #80c8c9;
+    --background-color-block: #e0ead6;
+    --main-color-text: #333333;
+    --second-color-shadow-hover: #4d4d4d;
+
+    --color-text-calc-operator: rgba(165, 42, 42, 0.85);
+    --color-text-calc-per-back-operator:#00CF00;
 }
-:root[data-theme='dark']{
-    --background-color-primary:#151515;
-    --background-color-greeting:#000000;
-    --main-black-color:#FCFCEE;
-    --second-black-color:#f2f3f4;
+:root[data-theme='night'] {
+    --background-color-primary: #0e1433;
+    --background-color-block: #072946;
+    --main-color-text: #e0ead6;
+    --second-color-shadow-hover: #b0b0a0;
+
+    --color-text-calc-operator: rgba(165, 42, 42, 0.85);
+    --color-text-calc-per-back-operator:#00CF00;
 }
-/* #1E1E1E для ночной темы */
-body{
+:root[data-theme='dark'] {
+    --background-color-primary: #151515;
+    --background-color-block: #000000;
+    --main-color-text: #fcfcee;
+    --second-color-shadow-hover: #f2f3f4;
+
+    --color-text-calc-operator: rgba(165, 42, 42, 0.85);
+    --color-text-calc-per-back-operator:#00CF00;
+}
+
+body {
     background-color: var(--background-color-primary);
 
     display: flex;
@@ -32,113 +81,4 @@ body{
     gap: 70px;
 
     min-height: 100vh;
-}
-
-
-.greeting {
-
-    background-color: var(--background-color-greeting);
-    max-width: 35%;
-    min-width: 30%;
-    padding: 20px 20px 30px 20px;
-    color: var(--main-black-color);
-
-    border: 5px solid var(--main-black-color);
-    border-radius: 15px;
-    box-shadow: 7px 7px var(--second-black-color);
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    
-}
-.greeting__title {
-    color: inherit;
-    margin-bottom: 40px;
-}
-.greeting__title-label {
-    color: inherit;
-    margin-bottom: 40px;
-
-    font-weight: 700;
-    font-size: 18px;
-}
-
-/* .greeting__title-label:last-of-type{
-    margin-bottom: 30px;
-} */
-
-.greeting__links-container {
-    color: inherit;
-}
-.greeting__link {
-    color: inherit;
-    font-weight: 600;
-    font-size: 18px;
-
-    padding: 10px 10px;
-    border: 3px solid var(--main-black-color);
-    border-radius: 5px;
-
-    transition: all 0.4s;
-}
-
-
-.greeting__link:hover{
-    background-color: var(--main-black-color);
-    color: var(--background-color-greeting);
-}
-
-
-
-.theme-lang {
-    background-color: var(--background-color-greeting);
-    max-width: 35%;
-    min-width: 30%;
-    padding: 20px 40px;
-    color: var(--main-black-color);
-
-    border: 5px solid var(--main-black-color);
-    border-radius: 15px;
-    box-shadow: 7px 7px var(--second-black-color);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.theme-lang__theme {
-    display: flex;
-    gap: 10px;
-}
-.theme-lang__btn-change-theme {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.light {
-    background-color: #Fdfff5;
-    
-}
-.dark {
-    background-color: #333333;
-}
-.night {
-    background-color: #0A3D62;
-
-}
-.theme-lang__lang {
-    color: inherit;
-    font-weight: 700;
-}
-/* .theme-lang__change-lang {
-} */
-
-.separator{
-    color: inherit;
-}
-
-.theme-lang__change-lang.active {
-    text-decoration: underline;
 }
