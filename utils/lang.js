@@ -3,6 +3,11 @@ const TITLE = document.querySelector('.greeting__title');
 const LABEL = document.querySelector('.greeting__title-label');
 const LINK = document.querySelector('.greeting__link');
 
+(function () {
+    const activeLang = localStorage.getItem('lang') || 'en';
+    setLang(activeLang);
+})();
+
 LANG_BTNS.forEach((button) => {
     button.addEventListener('click', (event) => {
         const activeLang = event.target.textContent;
@@ -27,5 +32,3 @@ function setLang(lang) {
         localStorage.setItem('lang', 'rus');
     }
 }
-
-export default setLang;

@@ -1,5 +1,8 @@
 const htmlElement = document.documentElement;
-
+(function () {
+    const currentTheme = localStorage.getItem('currentTheme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+})();
 /**
  * * Кнопки на изменение цвета
  */

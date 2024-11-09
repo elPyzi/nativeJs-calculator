@@ -1,115 +1,116 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../assets/styles/index.css" />
-        <link rel="stylesheet" href="../assets/styles/calculator.css" />
-        <link rel="stylesheet" href="../assets/styles/footer.css" />
-        <script async src="../utils/settings.js"></script>
-        <script defer src="../utils/changeTheme.js"></script>
-        <script defer src="../utils/calculator.js"></script>
-        <title>Calculator</title>
-    </head>
-    <body>
-        <div class="calculator">
-            <div class="calculator__display">
-                <div class="calculator__input">
-                    <span class="operator"></span>
-                    <!-- <span class="brackets">% ()</span> -->
-                </div>
-                <div class="calculator__output"></div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/index.css" />
+    <link rel="stylesheet" href="../assets/styles/calculator.css" />
+    <link rel="stylesheet" href="../assets/styles/footer.css" />
+    <script defer src="../utils/changeTheme.js"></script>
+    <script defer src="../utils/calculator.js"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="calculator__display">
+            <div class="calculator__input">
+                <span class="operator"></span>
+                <!-- <span class="brackets">% ()</span> -->
             </div>
-            <div class="calculator__keyboard">
-                <!-- первая линия grid для кнопок -->
-                <button type="button" class="calculator__buttons" value="C">
-                    C
-                </button>
-                <button type="button" class="calculator__buttons" value="change">
-                    +/-
-                </button>
-                <button type="button" class="calculator__buttons" value="%">
-                    %
-                </button>
-                <button type="button" class="calculator__buttons" value="/">
-                    &divide;
-                </button>
-                
-                <!-- вторая -->
-                <button type="button" class="calculator__buttons" value="7">
-                    7
-                </button>
-                <button type="button" class="calculator__buttons" value="8">
-                    8
-                </button>
-                <button type="button" class="calculator__buttons" value="9">
-                    9
-                </button>
-                <button type="button" class="calculator__buttons" value="*">
-                    &times;
-                </button>
-                
-                <!-- третья -->
-                <button type="button" class="calculator__buttons" value="4">
-                    4
-                </button>
-                <button type="button" class="calculator__buttons" value="5">
-                    5
-                </button>
-                <button type="button" class="calculator__buttons" value="6">
-                    6
-                </button>
-                <button type="button" class="calculator__buttons" value="-">
-                    -
-                </button>
-                
-                <!-- четвертая -->
-                <button type="button" class="calculator__buttons" value="1">
-                    1
-                </button>
-                <button type="button" class="calculator__buttons" value="2">
-                    2
-                </button>
-                <button type="button" class="calculator__buttons" value="3">
-                    3
-                </button>
-                <button type="button" class="calculator__buttons" value="+">
-                    +
-                </button>
-                
-                <!-- пятая -->
-                <button type="button" class="calculator__buttons" value="del">
-                    &lt;
-                </button>
-                <button type="button" class="calculator__buttons" value="0">
-                    0
-                </button>
-                <button type="button" class="calculator__buttons" value=",">
-                    ,
-                </button>
-                <button type="button" class="calculator__buttons" value="=">
-                    =
-                </button>
-                </div>
-                </div>
-                
-                <div class="theme-lang" style="min-width: 20% !important">
-                    <div class="theme-lang__theme">
-                        <div type="button" light-mode="false" class="theme-lang__btn-change-theme light"></div>
-                        <div type="button" dark-mode="false" class="theme-lang__btn-change-theme dark"></div>
-                        <div type="button" night-mode="false" class="theme-lang__btn-change-theme night"></div>
-                    </div>
-                    <div class="history-back" onclick="history.back()">
-                        <svg class="history-back__btn" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path class="history-back__path" d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#000000" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                </body>
-                
-                </html>
+            <div class="calculator__output"></div>
+        </div>
+        <div class="calculator__keyboard">
+            <!-- первая линия grid для кнопок -->
+            <button type="button" class="calculator__buttons" value="C">
+                C
+            </button>
+            <button type="button" class="calculator__buttons" value="change">
+                +/-
+            </button>
+            <button type="button" class="calculator__buttons" value="%">
+                %
+            </button>
+            <button type="button" class="calculator__buttons" value="/">
+                &divide;
+            </button>
+
+            <!-- вторая -->
+            <button type="button" class="calculator__buttons" value="7">
+                7
+            </button>
+            <button type="button" class="calculator__buttons" value="8">
+                8
+            </button>
+            <button type="button" class="calculator__buttons" value="9">
+                9
+            </button>
+            <button type="button" class="calculator__buttons" value="*">
+                &times;
+            </button>
+
+            <!-- третья -->
+            <button type="button" class="calculator__buttons" value="4">
+                4
+            </button>
+            <button type="button" class="calculator__buttons" value="5">
+                5
+            </button>
+            <button type="button" class="calculator__buttons" value="6">
+                6
+            </button>
+            <button type="button" class="calculator__buttons" value="-">
+                -
+            </button>
+
+            <!-- четвертая -->
+            <button type="button" class="calculator__buttons" value="1">
+                1
+            </button>
+            <button type="button" class="calculator__buttons" value="2">
+                2
+            </button>
+            <button type="button" class="calculator__buttons" value="3">
+                3
+            </button>
+            <button type="button" class="calculator__buttons" value="+">
+                +
+            </button>
+
+            <!-- пятая -->
+            <button type="button" class="calculator__buttons" value="del">
+                &lt;
+            </button>
+            <button type="button" class="calculator__buttons" value="0">
+                0
+            </button>
+            <button type="button" class="calculator__buttons" value=",">
+                ,
+            </button>
+            <button type="button" class="calculator__buttons" value="=">
+                =
+            </button>
+        </div>
+    </div>
+
+    <div class="theme-lang" style="min-width: 20% !important">
+        <div class="theme-lang__theme">
+            <div type="button" light-mode="false" class="theme-lang__btn-change-theme light"></div>
+            <div type="button" dark-mode="false" class="theme-lang__btn-change-theme dark"></div>
+            <div type="button" night-mode="false" class="theme-lang__btn-change-theme night"></div>
+        </div>
+        <div class="history-back" onclick="history.back()">
+            <svg class="history-back__btn" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path class="history-back__path" d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#000000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </svg>
+        </div>
+    </div>
+</body>
+
+</html>

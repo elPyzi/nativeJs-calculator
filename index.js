@@ -7,4 +7,3 @@ import './assets/styles/convertor.css';
 import './utils/changeTheme';
 import './utils/calculator';
 import './utils/lang';
-import './utils/settings';
