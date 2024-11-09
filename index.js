@@ -4,6 +4,7 @@ import './assets/styles/footer.css';
 import './assets/styles/greeting.css';
 import './assets/styles/calculator.css';
 import './assets/styles/convertor.css';
-import './utils/theme/changeTheme';
+import './utils/changeTheme';
 import './utils/calculator';
 import './utils/lang';
+import './utils/settings';

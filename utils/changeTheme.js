@@ -1,29 +1,4 @@
 const htmlElement = document.documentElement;
-(function () {
-    const currentTheme = localStorage.getItem('currentTheme');
-    if (currentTheme) {
-        switch (currentTheme) {
-            case 'light': {
-                htmlElement.setAttribute('data-theme', 'light');
-                break;
-            }
-            case 'dark': {
-                htmlElement.setAttribute('data-theme', 'dark');
-                break;
-            }
-            case 'night': {
-                htmlElement.setAttribute('data-theme', 'night');
-                break;
-            }
-            default: {
-                htmlElement.setAttribute('data-theme', 'light');
-                break;
-            }
-        }
-    } else {
-        htmlElement.setAttribute('data-theme', 'light');
-    }
-})();
 
 /**
  * * Кнопки на изменение цвета
