@@ -57,12 +57,7 @@ function calc(event) {
 
 function addValue(value) {
     if (DISPLAY_OUTPUT.textContent.length >= 15) return;
-    // if (countLine > 15) {
-    //     DISPLAY_OUTPUT.innerHTML += '<br>';
-    //     countLine = 0;
-    // }
-    // DISPLAY_OUTPUT.innerHTML += value;
-    // countLine++;
+
     if (isNewNumber) {
         DISPLAY_OUTPUT.textContent = value;
         isNewNumber = false;
@@ -187,88 +182,3 @@ document.addEventListener('keydown', (event) => {
             break;
     }
 });
-
-// function signChange() {
-//     let value = DISPLAY_OUTPUT.textContent;
-//     const match = value.match(/(-?\d+)(?!.*\d)/);
-//     if (match) {
-//         const num = match[0];
-//         const newNum = num.startsWith('-') ? num.slice(1) : '-' + num;
-//         DISPLAY_OUTPUT.innerHTML = value.slice(0, match.index) + newNum;
-//     }
-// }
-
-//100/100% + 25 - 48 * 2 + (2*(1-5)) = 21
-
-// function calculate(expresion) {
-//     //3+9 9-3 8/2 5*6 1-2
-//     // 3+9+2 9-3-10 10+10*2
-//     //['+', '-', '*', '/']
-//     expresion = expresion.trim();
-//     let i = 0;
-//     const operators = [];
-//     const operands = [];
-//     while (i < expresion.length) {
-//         //10+50-5+100/2+5*3
-//         const symbol = expresion[i];
-//         if (['+', '-', '*', '/'].includes(symbol)) {
-//             while (
-//                 operators.length &&
-//                 priority[operators[operators.length - 1]] > priority(symbol)
-//             ) {
-//                 calculateValue(operators, operands);
-//             }
-//             operators.push(symbol);
-//         } else {
-//             let num = '';
-//             while (i < expresion.length && !isNaN(expresion[i])) {
-//                 num += expresion[i];
-//                 i++;
-//             }
-//             operands.push(Number(num));
-//             continue;
-//         }
-//         i++;
-//     }
-
-//     while (operators.length) {
-//         calculateValue(operators, operands);
-//     }
-//     DISPLAY_OUTPUT.innerHTML = operands[0];
-// }
-
-// function priority(operators) {
-//     if (operators == '+' || operators == '-') {
-//         return 1;
-//     } else if (operators == '*' || operators == '/') {
-//         return 2;
-//     }
-//     return 0;
-// }
-
-// function calculateValue(operators, operands) {
-//     const operator = operators.pop();
-//     const a = operands.pop();
-//     const b = operands.pop();
-//     switch (operator) {
-//         case '+': {
-//             operands.push(a + b);
-//             break;
-//         }
-//         case '-': {
-//             operands.push(a - b);
-//             break;
-//         }
-//         case '*': {
-//             operands.push(a * b);
-//             break;
-//         }
-//         case '/': {
-//             operands.push(a / b);
-//             break;
-//         }
-//         default:
-//             DISPLAY_OUTPUT.innerHTML = 'Error';
-//             break;
-//     }
-// }

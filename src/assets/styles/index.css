@@ -48,27 +48,18 @@ html {
     --background-color-block: #e0ead6;
     --main-color-text: #333333;
     --second-color-shadow-hover: #4d4d4d;
-
-    --color-text-calc-operator: rgba(165, 42, 42, 0.85);
-    --color-text-calc-per-back-operator:#00CF00;
 }
 :root[data-theme='night'] {
     --background-color-primary: #0e1433;
     --background-color-block: #072946;
     --main-color-text: #e0ead6;
     --second-color-shadow-hover: #b0b0a0;
-
-    --color-text-calc-operator: rgba(165, 42, 42, 0.85);
-    --color-text-calc-per-back-operator:#00CF00;
 }
 :root[data-theme='dark'] {
     --background-color-primary: #151515;
     --background-color-block: #000000;
     --main-color-text: #fcfcee;
     --second-color-shadow-hover: #f2f3f4;
-
-    --color-text-calc-operator: rgba(165, 42, 42, 0.85);
-    --color-text-calc-per-back-operator:#00CF00;
 }
 
 body {
